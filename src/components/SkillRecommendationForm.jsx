@@ -96,7 +96,9 @@ function SkillRecommendationForm() {
           />
         </div>
 
-        <button onClick={fetchRecommendations}>Get Recommendations</button>
+        <button onClick={fetchRecommendations}>
+          Get Recommendations (scroll down){" "}
+        </button>
 
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
 
