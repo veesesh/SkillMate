@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import Recommendations from "./Recommendations";
 
-const genAI = new GoogleGenerativeAI("");
+const genAI = new GoogleGenerativeAI(import.meta.env.VITE_REACT_APP_API_KEY);
+
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 console.log("heheheheh");
@@ -99,7 +100,6 @@ function SkillRecommendationForm() {
 
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
 
-        
         <Recommendations recommendations={recommendations} />
       </div>
     </div>
