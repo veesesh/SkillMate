@@ -58,7 +58,7 @@ function SkillRecommendationForm() {
   return (
     <div className="main-section">
       <div>
-        <h2>Personalized Skill Recommendation System</h2>
+        <h2>Unlock your potential with the right skills!</h2>
         <div>
           <label>Current Job Role:</label>
           <input
@@ -87,7 +87,7 @@ function SkillRecommendationForm() {
           />
         </div>
         <div>
-          <label>Learning Goals:</label>
+          <label>Skills Learning at Present:</label>
           <input
             type="text"
             name="learningGoals"
