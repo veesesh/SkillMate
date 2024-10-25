@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import Recommendations from "./Recommendations";
 
 const genAI = new GoogleGenerativeAI("");
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
@@ -54,7 +55,7 @@ function SkillRecommendationForm() {
   };
 
   return (
-    <div>
+    <div className="main-section">
       <div>
         <h2>Personalized Skill Recommendation System</h2>
         <div>
@@ -98,12 +99,8 @@ function SkillRecommendationForm() {
 
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
 
-        <h3>Recommended Skills:</h3>
-        <ul>
-          {recommendations.map((skill, index) => (
-            <li key={index}>{skill}</li>
-          ))}
-        </ul>
+        
+        <Recommendations recommendations={recommendations} />
       </div>
     </div>
   );
